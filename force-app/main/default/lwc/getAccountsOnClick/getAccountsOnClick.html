@@ -1,0 +1,22 @@
+<template>
+
+    <template if:true={accountsdata}>
+        <template for:each={accountsdata} for:item="account">
+            <lightning-card title={account.name} key={account.AccountNumber}>
+                <div>
+                    Industry Name is : {account.Industry}
+                </div>
+                <div>
+                    Account Number is : {account.AccountNumber}
+                </div>
+
+            </lightning-card>
+        </template>
+
+    </template>
+    
+
+    <lightning-button variant="brand" label="Get Accounts" onclick={handleOnClick}>
+
+    </lightning-button>
+</template>
